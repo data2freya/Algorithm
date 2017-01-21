@@ -7,9 +7,17 @@
 //
 
 #include <iostream>
+#include <vector>
+#include "BSTree.h"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+	std::vector<BSTree::Node*> v;
+	BSTree tree;
+	while(1) {
+		int value;
+		std::cin >> value;
+		v.push_back(tree.add(value));
+		printf("%d\n", tree.getRoot()->value);
+	}
+	return 0;
 }
